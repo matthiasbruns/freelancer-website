@@ -1,0 +1,91 @@
+@import "colors";
+
+$animation-duration: 750ms;
+$animation-duration-parallax: 900ms;
+
+.hero {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  overflow: visible;
+  width: 100%;
+  height: 100vh;
+  background-color: $black;
+  transition-duration: $animation-duration;
+
+  h1 {
+    text-align: end;
+    display: block;
+    color: white;
+    font-size: 20vw;
+    white-space: nowrap;
+    overflow: clip;
+    transition-duration: $animation-duration;
+
+    & > span {
+      overflow: visible;
+      width: 100%;
+      transition-duration: $animation-duration;
+    }
+
+    & > .firstname {
+      color: $accent;
+
+      &:before {
+        content: "Matthias";
+        color: white;
+        transition-duration: $animation-duration;
+      }
+    }
+
+    & > .lastname {
+      color: white;
+
+      &:before {
+        content: "Bruns";
+        color: $accent;
+        transition-duration: $animation-duration-parallax;
+      }
+
+      &:after {
+        content: ".";
+        color: $accent;
+        transition-duration: $animation-duration;
+      }
+    }
+  }
+
+  &.active {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 250px;
+
+    h1 {
+      position: relative;
+      font-size: 2em;
+      text-align: end;
+      right: 1rem;
+      bottom: 1rem;
+
+      & > .firstname {
+        color: $accent;
+
+        &:before {
+          opacity: 0;
+        }
+      }
+
+      & > .lastname {
+
+        &:before {
+          opacity: 0;
+        }
+      }
+    }
+  }
+
+}

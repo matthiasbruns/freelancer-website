@@ -14,10 +14,13 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@fontsource/anton": "^4.5.9"
+    "@fontsource/anton": "^4.5.9",
+    "aos": "^2.3.4",
+    "reset-css": "^5.0.1"
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^3.3.0",
+    "@types/aos": "^3.0.4",
     "@typescript-eslint/eslint-plugin": "^5.40.0",
     "@typescript-eslint/parser": "^5.40.0",
     "clean-webpack-plugin": "^4.0.0",

@@ -1,20 +1,17 @@
+import "reset-css";
 import "@fontsource/anton";
 import "./styles.scss";
 
-function init() {
-  const form = document.querySelector("form");
-  form?.addEventListener("submit", submitHandler);
-}
+function hero() {
+  const heroWrapper = document.querySelector(".hero-wrapper");
+  const hero = document.querySelector(".hero");
+  const elementTop = heroWrapper.getBoundingClientRect().top;
 
-function submitHandler(e: Event) {
-  e.preventDefault();
-  const num1 = document.querySelector("input[name='a']") as HTMLInputElement;
-  const num2 = document.querySelector("input[name='b']") as HTMLInputElement;
-  const result = Number(num1.value) - Number(num2.value);
-  const resultElement = document.querySelector("p");
-  if (resultElement) {
-    resultElement.textContent = result.toString();
+  if (elementTop < 0) {
+    hero.classList.add("active");
+  } else {
+    hero.classList.remove("active");
   }
 }
 
-init();
+window.addEventListener("scroll", hero);

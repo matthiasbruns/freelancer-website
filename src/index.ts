@@ -7,7 +7,7 @@ function hero() {
   const hero = document.querySelector(".hero");
   const elementTop = heroWrapper.getBoundingClientRect().top;
 
-  if (elementTop < 0) {
+  if (elementTop < -20) {
     hero.classList.add("active");
   } else {
     hero.classList.remove("active");

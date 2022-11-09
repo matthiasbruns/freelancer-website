@@ -1,0 +1,15 @@
+{
+  "semi": true,
+  "trailingComma": "all",
+  "singleQuote": false,
+  "printWidth": 150,
+  "tabWidth": 2,
+  "importOrder": [
+    "^@/dynamodb/(.*)$",
+    "^@/logger/(.*)$",
+    "^@/scraper/(.*)$",
+    "^[./]"
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
+}

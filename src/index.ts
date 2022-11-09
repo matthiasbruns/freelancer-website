@@ -1,4 +1,5 @@
-import "./index.css";
+import "@fontsource/anton";
+import "./styles.scss";
 
 function init() {
   const form = document.querySelector("form");

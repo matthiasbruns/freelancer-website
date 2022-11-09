@@ -6,3 +6,4 @@ node_modules/*
 **/index.*.html
 **/assets/*.html
 webpack.config.js
+coverage

@@ -3,6 +3,12 @@
 $animation-duration: 750ms;
 $animation-duration-parallax: 850ms;
 
+.hero-wrapper {
+  &.animate * {
+    transition-duration: $animation-duration;
+  }
+}
+
 .hero {
   position: absolute;
   display: flex;
@@ -12,7 +18,6 @@ $animation-duration-parallax: 850ms;
   width: 100%;
   height: 100vh;
   background-color: $black;
-  transition-duration: $animation-duration;
 
   h1 {
     text-align: end;
@@ -21,21 +26,20 @@ $animation-duration-parallax: 850ms;
     font-size: 20vw;
     white-space: nowrap;
     overflow: clip;
-    transition-duration: $animation-duration;
 
     & > span {
       overflow: visible;
       width: 100%;
-      transition-duration: $animation-duration;
     }
 
     & > .firstname {
       color: $accent;
+      padding-right: 0.25em;
 
       &:before {
+        transition-duration: $animation-duration;
         content: "Matthias";
         color: white;
-        transition-duration: $animation-duration;
       }
     }
 
@@ -43,15 +47,14 @@ $animation-duration-parallax: 850ms;
       color: white;
 
       &:before {
+        transition-duration: $animation-duration;
         content: "Bruns";
         color: $accent;
-        transition-duration: $animation-duration-parallax;
       }
 
       &:after {
         content: ".";
         color: $accent;
-        transition-duration: $animation-duration;
       }
     }
   }

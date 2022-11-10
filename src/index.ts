@@ -2,15 +2,17 @@ import "reset-css";
 import "@fontsource/anton";
 import "./styles.scss";
 
-function hero() {
-  const heroWrapper = document.querySelector(".hero-wrapper");
-  const hero = document.querySelector(".hero");
-  const elementTop = heroWrapper.getBoundingClientRect().top;
+const heroWrapper = document.querySelector(".hero-wrapper");
+const heroElement = document.querySelector(".hero");
 
-  if (elementTop < -20) {
-    hero.classList.add("active");
+function hero() {
+  const elementTop = heroWrapper.getBoundingClientRect().top;
+  heroWrapper.classList.add("animate");
+
+  if (elementTop < 0) {
+    heroElement.classList.add("active");
   } else {
-    hero.classList.remove("active");
+    heroElement.classList.remove("active");
   }
 }
 

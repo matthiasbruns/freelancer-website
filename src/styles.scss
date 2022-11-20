@@ -2,6 +2,7 @@
 @import "scss/colors";
 @import "scss/animations";
 @import "scss/hero";
+@import "scss/catchphrase";
 
 * {
   margin: 0;
@@ -13,6 +14,13 @@
 html, body {
   width: 100vw;
   height: 100vh;
+  
+  -ms-overflow-style: none;
+  scrollbar-width: none; 
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {

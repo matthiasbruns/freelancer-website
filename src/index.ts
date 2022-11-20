@@ -2,18 +2,10 @@ import "reset-css";
 import "@fontsource/anton";
 import "./styles.scss";
 
-const heroWrapper = document.querySelector(".hero-wrapper");
-const heroElement = document.querySelector(".hero");
+import Hero from "./lib/hero";
+import CatchPhrase from "./lib/catchphrase";
 
-function hero() {
-  const elementTop = heroWrapper.getBoundingClientRect().top;
-  heroWrapper.classList.add("animate");
+Hero();
+CatchPhrase();
 
-  if (elementTop < 0) {
-    heroElement.classList.add("active");
-  } else {
-    heroElement.classList.remove("active");
-  }
-}
-
-window.addEventListener("scroll", hero);
+// https://www.youtube.com/watch?v=VgS5CP7zlXE

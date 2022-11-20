@@ -5,5 +5,5 @@ node_modules/*
 **/index.html
 **/index.*.html
 **/assets/*.html
-webpack.config.js
+webpack.*.js
 coverage

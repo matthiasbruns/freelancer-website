@@ -1,0 +1,22 @@
+@import "colors";
+
+.footer-wrapper {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  min-height: 50px;
+  height: 3em;
+  background-color: #262523;
+  color: white;
+  font-weight: 500;
+
+  .footer {
+    display: flex;
+    height: 100%;
+    padding-left: 2em;
+    padding-right: 2em;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

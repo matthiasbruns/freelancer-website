@@ -1,11 +1,18 @@
 export default function CatchPhrase() {
-  //const heroWrapper = document.querySelector(".catchphrase-wrapper");
-  //const catchphraseElement = document.querySelector(".catchphrase") as HTMLElement;
+  const catchphraseWrapper = document.querySelector(".catchphrase-wrapper");
+  const catchphraseElement = document.querySelector(".catchphrase") as HTMLElement;
 
   function catchphrase() {
-    console.log(this.scrollY);
-    //catchphraseElement.style.transform = `translateY(${-this.scrollY * 0.5}px)`;
+    const elementTop = catchphraseWrapper.getBoundingClientRect().top;
+    console.log(elementTop);
+
+    catchphraseElement.style.pointerEvents = "none";
+    if(elementTop < 0) {
+      catchphraseElement.style.pointerEvents = "auto";
+    }
+
   }
 
   window.addEventListener("scroll", catchphrase);
+  catchphraseElement.style.pointerEvents = "none";
 }

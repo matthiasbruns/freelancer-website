@@ -3,6 +3,7 @@
 @import "scss/animations";
 @import "scss/hero";
 @import "scss/catchphrase";
+@import "scss/footer";
 
 * {
   margin: 0;
@@ -14,17 +15,35 @@
 html, body {
   width: 100vw;
   height: 100vh;
-  
+
   -ms-overflow-style: none;
-  scrollbar-width: none; 
+  scrollbar-width: none;
 
   &::-webkit-scrollbar {
     display: none;
   }
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, {
   font-family: "Anton", ui-serif;
+}
+
+p, a {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+    color: $accent;
+  }
+
+  &:hover, &:visited, &:active {
+    cursor: pointer;
+  }
 }
 
 section {
